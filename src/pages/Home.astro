@@ -1,0 +1,149 @@
+---
+// RecordStudioModern.astro — versione più dinamica e verticale del layout Record Studio
+import './style.css';
+---
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Record Studio Modern — Creative multimedia & advertising studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="fade-in">
+      <div class="container flex nav">
+        <div class="brand">Record Studio</div>
+        <nav class="flex nav-menu">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contacts">Contact</a>
+          <a class="cta" href="#talk">Let's talk!</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero parallax">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content fade-up">
+        <h1 class="headline">Where <span>Creativity</span> meets <span>Emotion</span></h1>
+        <p class="subcopy">We design, film, and tell stories that connect brands with people — through visuals that move hearts.</p>
+        <a href="#work" class="scroll-down">↓ Explore our world</a>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section id="work" class="works">
+      <div class="container">
+        <h2 class="section-title fade-up">Our Latest Works</h2>
+        <div class="grid">
+          <article class="card reveal">
+            <div class="thumb"></div>
+            <div class="card-footer">
+              <h3 class="title">Versace Watch — Skeleton</h3>
+              <span class="meta">View →</span>
+            </div>
+          </article>
+          <article class="card reveal delay1">
+            <div class="thumb alt1"></div>
+            <div class="card-footer">
+              <h3 class="title">Armani Beauty — Venice Film Festival</h3>
+              <span class="meta">View →</span>
+            </div>
+          </article>
+          <article class="card reveal delay2">
+            <div class="thumb alt2"></div>
+            <div class="card-footer">
+              <h3 class="title">Diadora Sport — Race Pack</h3>
+              <span class="meta">View →</span>
+            </div>
+          </article>
+          <article class="card reveal delay3">
+            <div class="thumb alt3"></div>
+            <div class="card-footer">
+              <h3 class="title">Pianca — Armonie</h3>
+              <span class="meta">View →</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container fade-up">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          We are a team of storytellers, designers, and filmmakers committed to crafting meaningful experiences. Each project we produce aims to merge aesthetics, emotion, and strategy into one seamless narrative.
+        </p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Vision</h3>
+            <p>We envision a world where visuals inspire empathy and creativity drives connection.</p>
+          </div>
+          <div class="about-card">
+            <h3>Mission</h3>
+            <p>To translate human emotion into visual form — one frame at a time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services parallax-bg">
+      <div class="overlay"></div>
+      <div class="container fade-up">
+        <h2 class="section-title light">What We Do</h2>
+        <div class="service-grid">
+          <div class="service">
+            <h3>Video Production</h3>
+            <p>From cinematic ads to brand documentaries, we capture emotion with precision.</p>
+          </div>
+          <div class="service">
+            <h3>Design & Branding</h3>
+            <p>Visual identities that speak louder than words — crafted to stand out.</p>
+          </div>
+          <div class="service">
+            <h3>Post-Production</h3>
+            <p>Editing, color grading, and motion that breathe life into every project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Finale -->
+    <section class="final-cta fade-up">
+      <div class="container">
+        <h2>Let’s craft your next story together</h2>
+        <a href="#talk" class="cta-big">Start a Project →</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacts" class="fade-in">
+      <div class="container footer-grid">
+        <div class="f-col">
+          <h5>Record Studio Srl</h5>
+          <p>Via Tullio Piccinini 35, 31033 Castelfranco Veneto, TV</p>
+        </div>
+        <div class="f-col">
+          <h5>Contacts</h5>
+          <p>+39 342 3514967 · <a href="mailto:info@recordstudio.it">info@recordstudio.it</a></p>
+        </div>
+        <div class="f-col">
+          <h5>Language</h5>
+          <p class="lang"><a href="#" class="active">English</a> <a href="#">Italiano</a></p>
+        </div>
+        <div class="credits">© 2025 Record Studio — All rights reserved</div>
+      </div>
+    </footer>
+  </body>
+</html>
