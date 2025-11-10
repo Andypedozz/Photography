@@ -1,14 +1,46 @@
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="particles" id="particles"></div>
-    <div class="container hero-content">
-        <h1 class="headline">
-            Where <span>Creativity</span> meets <span>Emotion</span>
+<section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+>
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 opacity-20">
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-violet-500/30 rounded-full blur-3xl animate-float"
+        >
+        </div>
+        <div
+            class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float"
+            style="animation-delay: 2s;"
+        >
+        </div>
+    </div>
+
+    <div
+        class="relative z-10 max-w-5xl mx-auto px-6 text-center animate-fade-in"
+    >
+        <h1 class="text-6xl md:text-8xl font-light leading-tight mb-6">
+            Where <span
+                class="text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-blue-400 font-normal"
+                >Creativity</span
+            > meets <span
+                class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400 font-normal"
+                >Emotion</span
+            >
         </h1>
-        <p class="subcopy">
-            We design, film, and tell stories that connect brands with people –
+        <p
+            class="text-xl md:text-2xl text-zinc-400 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+        >
+            We design, film, and tell stories that connect brands with people —
             through visuals that move hearts.
         </p>
-        <a href="#work" class="scroll-down">↓ Explore our world</a>
+        <a
+            href="#works"
+            class="inline-flex items-center gap-2 text-sm tracking-widest text-zinc-400 hover:text-zinc-100 transition-all duration-300 group"
+        >
+            <span
+                class="group-hover:translate-y-1 transition-transform duration-300"
+                >↓</span
+            >
+            <span>Explore our world</span>
+        </a>
     </div>
 </section>
