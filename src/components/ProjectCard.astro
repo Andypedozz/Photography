@@ -1,0 +1,37 @@
+---
+const { project } = Astro.props;
+---
+
+<div class="card">
+  <h3>{project.name}</h3>
+  <p>{project.description}</p>
+  <ul>
+    {project.tech.map(t => <li>{t}</li>)}
+  </ul>
+</div>
+
+<style>
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  ul {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  li {
+    background: #f2f2f2;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+</style>
