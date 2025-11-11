@@ -1,0 +1,119 @@
+---
+import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
+import Layout from "../layouts/Layout.astro"
+import "./_index.css"
+
+const links = [
+    { label: "Home", href: "/"},
+]
+
+---
+
+<Layout>
+    <div class="text-zinc-100">
+        <Header links={links}/>
+        <section id="contact" class="bg-zinc-950 py-32 px-6">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="text-zinc-50 text-5xl md:text-6xl font-light mb-12">Contattami</h2>
+            <p class="text-xl text-zinc-400 leading-relaxed mb-20 max-w-4xl">
+              Hai un progetto, una collaborazione o semplicemente una domanda?
+              Compila il modulo qui sotto e ti rispondero' il prima possibile.
+            </p>
+        
+            <form
+              action="#"
+              method="POST"
+              class="grid md:grid-cols-2 gap-12"
+            >
+              <!-- Campo Email -->
+              <div
+                class="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-violet-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-violet-500/10 col-span-2 md:col-span-1"
+              >
+                <label for="email" class="block text-violet-400 text-2xl font-light mb-4"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="La tua email"
+                  class="w-full bg-transparent border-b border-zinc-700 focus:border-violet-500 text-zinc-200 text-lg py-2 outline-none transition-colors duration-300"
+                />
+              </div>
+        
+              <!-- Campo Oggetto -->
+              <div
+                class="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-violet-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-violet-500/10 col-span-2 md:col-span-1"
+              >
+                <label for="subject" class="block text-violet-400 text-2xl font-light mb-4"
+                  >Oggetto</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  placeholder="Oggetto del messaggio"
+                  class="w-full bg-transparent border-b border-zinc-700 focus:border-violet-500 text-zinc-200 text-lg py-2 outline-none transition-colors duration-300"
+                />
+              </div>
+        
+              <!-- Campo Messaggio -->
+              <div
+                class="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-violet-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-violet-500/10 md:col-span-2"
+              >
+                <label
+                  for="message"
+                  class="block text-violet-400 text-2xl font-light mb-4"
+                  >Messaggio</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="Scrivi il tuo messaggio..."
+                  class="w-full bg-transparent border-b border-zinc-700 focus:border-violet-500 text-zinc-200 text-lg py-2 outline-none transition-colors duration-300 resize-none"
+                ></textarea>
+              </div>
+        
+              <!-- Pulsante -->
+              <div class="md:col-span-2 text-center mt-8">
+                <button
+                  type="submit"
+                  class="px-10 py-4 bg-violet-500 hover:bg-violet-600 text-white text-lg font-light rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-violet-500/30"
+                >
+                  Invia messaggio
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+    </div>
+</Layout>
+
+<script is:inline>
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll("section > div").forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+    observer.observe(el);
+  });
+</script>
